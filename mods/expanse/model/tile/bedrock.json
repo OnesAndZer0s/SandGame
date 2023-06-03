@@ -1,0 +1,6 @@
+{
+  "parent": "core:tile/cube_all",
+  "textures": {
+    "all": "expanse:tile/bedrock"
+  }
+}

@@ -1,0 +1,7 @@
+{
+    "parent": "core:item/generated",
+    "textures": {
+        "layer0": "core:item/spawn_egg",
+        "layer1": "core:item/spawn_egg_overlay"
+    }
+}

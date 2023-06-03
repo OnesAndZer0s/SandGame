@@ -1,0 +1,31 @@
+{   "parent": "core:tile/tile",
+    "textures": {
+        "particle": "expanse:tile/dirt",
+        "bottom": "expanse:tile/dirt",
+        "top": "expanse:tile/tile_grass_top",
+        "side": "expanse:tile/tile_grass_side",
+        "overlay": "expanse:tile/tile_grass_side_overlay"
+    },
+    "elements": [
+        {   "from": [ -0.02, -0.02, -0.02 ],
+            "to": [ 16.02, 16.02, 16.02 ],
+            "faces": {
+                "down":  { "uv": [ 0, 0, 16, 16 ], "texture": "#bottom", "cullface": "down" },
+                "up":    { "uv": [ 0, 0, 16, 16 ], "texture": "#top",    "cullface": "up", "tintindex": 0 },
+                "north": { "uv": [ 0, 0, 16, 16 ], "texture": "#side", "tintindex": 0,  "cullface": "north" },
+                "south": { "uv": [ 0, 0, 16, 16 ], "texture": "#side", "tintindex": 0,  "cullface": "south" },
+                "west":  { "uv": [ 0, 0, 16, 16 ], "texture": "#side", "tintindex": 0,  "cullface": "west" },
+                "east":  { "uv": [ 0, 0, 16, 16 ], "texture": "#side",  "tintindex": 0, "cullface": "east" }
+            }
+        },
+        {   "from": [ 0, 0, 0 ],
+            "to": [ 16, 16, 16 ],
+            "faces": {
+                "north": { "uv": [ 0, 0, 16, 16 ], "texture": "#overlay",  "cullface": "north" },
+                "south": { "uv": [ 0, 0, 16, 16 ], "texture": "#overlay", "cullface": "south" },
+                "west":  { "uv": [ 0, 0, 16, 16 ], "texture": "#overlay",  "cullface": "west" },
+                "east":  { "uv": [ 0, 0, 16, 16 ], "texture": "#overlay",  "cullface": "east" }
+            }
+        }
+    ]
+}

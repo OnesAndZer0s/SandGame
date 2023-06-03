@@ -1,0 +1,6 @@
+{
+  "parent": "core:tile/leaves",
+  "textures": {
+    "all": "expanse:tile/leaves_oak"
+  }
+}

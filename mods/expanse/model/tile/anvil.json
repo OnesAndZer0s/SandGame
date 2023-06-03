@@ -1,0 +1,6 @@
+{
+  "parent": "expanse:tile/template_anvil",
+  "textures": {
+    "top": "expanse:tile/anvil_top"
+  }
+}

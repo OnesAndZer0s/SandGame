@@ -1,0 +1,7 @@
+{
+  "parent": "core:tile/cube_column",
+  "textures": {
+    "end": "expanse:tile/log_oak_top",
+    "side": "expanse:tile/log_oak"
+  }
+}
