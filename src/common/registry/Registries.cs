@@ -2,6 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using Sandbox.Common.Worlds.Items;
+using Sandbox.Common.Worlds.Tiles;
 
 namespace Sandbox.Common.Registry
 {

@@ -1,11 +1,5 @@
-using Sandbox.Server.Mods;
-using UnityEngine;
-using Sandbox.Worlds;
-using UnityEngine.UI;
-using Sandbox.Worlds.Items;
-using Sandbox.Worlds.Entities.Players;
-using Sandbox.Core.Registries;
-using Sandbox.Core;
+using System.Diagnostics;
+using Sandbox.Common.Mods;
 
 public class DyeHardMod : Mod
 {
@@ -13,7 +7,7 @@ public class DyeHardMod : Mod
 
   public DyeHardMod() : base(ModID, "Dye-Hard", 0, 0, 1, "Man, you must really like colors", "Sandbox Team")
   {
-    Debug.Log("Hello World from Dye-Hard!");
+    Debug.Print("Hello World from Dye-Hard!");
   }
 
 
@@ -24,7 +18,7 @@ public class DyeHardMod : Mod
 
   public override void Init(ModEventBus eventBus)
   {
-    Debug.Log("INIT MEE!");
+    Debug.Print("INIT MEE!");
     // run static constructor for ExpanseItems
     DyeHardItems.Init();
     // run static constructor for ExpanseBlocks

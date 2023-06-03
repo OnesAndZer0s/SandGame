@@ -1,8 +1,9 @@
-using Sandbox.Core;
-using Sandbox.Core.Registries;
-using Sandbox.Worlds;
-using Sandbox.Worlds.Items;
-using UnityEngine;
+
+
+
+using System.Diagnostics;
+using Sandbox.Common.Registry;
+using Sandbox.Common.Worlds.Items;
 
 public static class ExpanseItems
 {
@@ -24,7 +25,7 @@ public static class ExpanseItems
   public static Item ORE_DIAMOND = ITEMS.Register("expanse:ore_diamond", new TileItem(ExpanseTiles.ORE_DIAMOND));
   public static Item LOG_OAK = ITEMS.Register("expanse:log_oak", new TileItem(ExpanseTiles.LOG_OAK));
   public static Item PLANKS_OAK = ITEMS.Register("expanse:planks_oak", new TileItem(ExpanseTiles.PLANKS_OAK));
-  public static Item GLOWSTONE = ITEMS.Register("expanse:glowstone", new TileItem(ExpanseTiles.GLOWSTONE));
+  // public static Item GLOWSTONE = ITEMS.Register("expanse:glowstone", new TileItem(ExpanseTiles.GLOWSTONE));
   public static Item DIORITE = ITEMS.Register("expanse:diorite", new TileItem(ExpanseTiles.DIORITE));
   public static Item GRANITE = ITEMS.Register("expanse:granite", new TileItem(ExpanseTiles.GRANITE));
   public static Item ANDESITE = ITEMS.Register("expanse:andesite", new TileItem(ExpanseTiles.ANDESITE));
@@ -33,6 +34,6 @@ public static class ExpanseItems
 
   public static void Init()
   {
-    Debug.Log("ExpanseItems static constructor");
+    Debug.Print("ExpanseItems static constructor");
   }
 }

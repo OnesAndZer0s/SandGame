@@ -29,11 +29,11 @@ public class ExpanseMod : Mod
 
   public override void PostInit(ModEventBus eventBus)
   {
-    Player player = GameObject.Find("Player").GetComponent<Player>();
-    Registry<Item> itemRegistry = Registries.Get<Item>(BuiltInRegistries.ITEM);
-    player.inventory.SetItem(0, new ItemStack(ExpanseItems.TILE_GRASS, 64));
-    player.inventory.SetItem(1, new ItemStack(ExpanseItems.DIRT, 64));
-    player.inventory.SetItem(2, new ItemStack(ExpanseItems.COBBLESTONE, 64));
+    // Player player = GameObject.Find("Player").GetComponent<Player>();
+    // Registry<Item> itemRegistry = Registries.Get<Item>(BuiltInRegistries.ITEM);
+    // player.inventory.SetItem(0, new ItemStack(ExpanseItems.TILE_GRASS, 64));
+    // player.inventory.SetItem(1, new ItemStack(ExpanseItems.DIRT, 64));
+    // player.inventory.SetItem(2, new ItemStack(ExpanseItems.COBBLESTONE, 64));
 
   }
 }

@@ -1,8 +1,8 @@
-using Sandbox.Core;
-using Sandbox.Core.Registries;
-using Sandbox.Worlds;
-using Sandbox.Worlds.Tiles;
-using UnityEngine;
+
+
+using System.Diagnostics;
+using Sandbox.Common.Registry;
+using Sandbox.Common.Worlds.Tiles;
 
 public static class FizixTiles
 {
@@ -29,6 +29,6 @@ public static class FizixTiles
 
   public static void Init()
   {
-    Debug.Log("FizixItems static constructor");
+    Debug.Print("FizixItems static constructor");
   }
 }

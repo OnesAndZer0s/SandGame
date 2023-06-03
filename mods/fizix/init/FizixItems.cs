@@ -1,8 +1,8 @@
-using Sandbox.Core;
-using Sandbox.Core.Registries;
-using Sandbox.Worlds;
-using Sandbox.Worlds.Items;
-using UnityEngine;
+
+
+using System.Diagnostics;
+using Sandbox.Common.Registry;
+using Sandbox.Common.Worlds.Items;
 
 public static class FizixItems
 {
@@ -33,6 +33,6 @@ public static class FizixItems
 
   public static void Init()
   {
-    Debug.Log("FizixItems static constructor");
+    Debug.Print("FizixItems static constructor");
   }
 }

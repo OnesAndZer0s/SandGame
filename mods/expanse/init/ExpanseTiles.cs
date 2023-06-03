@@ -1,8 +1,7 @@
-using Sandbox.Core;
-using Sandbox.Core.Registries;
-using Sandbox.Worlds;
-using Sandbox.Worlds.Tiles;
-using UnityEngine;
+
+using System.Diagnostics;
+using Sandbox.Common.Registry;
+using Sandbox.Common.Worlds.Tiles;
 
 public static class ExpanseTiles
 {
@@ -20,7 +19,7 @@ public static class ExpanseTiles
   public static Tile ORE_DIAMOND = TILES.Register("expanse:ore_diamond", new Tile());
   public static Tile LOG_OAK = TILES.Register("expanse:log_oak", new Tile());
   public static Tile PLANKS_OAK = TILES.Register("expanse:planks_oak", new Tile());
-  public static Tile GLOWSTONE = TILES.Register("expanse:glowstone", new LitTile());
+  // public static Tile GLOWSTONE = TILES.Register("expanse:glowstone", new LitTile());
   public static Tile DIORITE = TILES.Register("expanse:diorite", new Tile());
   public static Tile GRANITE = TILES.Register("expanse:granite", new Tile());
   public static Tile ANDESITE = TILES.Register("expanse:andesite", new Tile());
@@ -29,6 +28,6 @@ public static class ExpanseTiles
 
   public static void Init()
   {
-    Debug.Log("ExpanseItems static constructor");
+    Debug.Print("ExpanseItems static constructor");
   }
 }
