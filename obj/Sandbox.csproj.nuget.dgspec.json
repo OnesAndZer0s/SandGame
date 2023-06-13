@@ -1,0 +1,147 @@
+{
+  "format": 1,
+  "restore": {
+    "/home/tayler/Programming/SandGame/Sandbox.csproj": {}
+  },
+  "projects": {
+    "/home/tayler/Programming/SandGame/Sandbox.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/tayler/Programming/SandGame/Sandbox.csproj",
+        "projectName": "Sandbox",
+        "projectPath": "/home/tayler/Programming/SandGame/Sandbox.csproj",
+        "packagesPath": "/home/tayler/.nuget/packages/",
+        "outputPath": "/home/tayler/Programming/SandGame/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/tayler/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Microsoft.CSharp": {
+              "target": "Package",
+              "version": "[4.7.0, )"
+            },
+            "OpenTK": {
+              "target": "Package",
+              "version": "[4.7.7, )"
+            },
+            "System.Buffers": {
+              "target": "Package",
+              "version": "[4.5.1, )"
+            },
+            "System.Collections": {
+              "target": "Package",
+              "version": "[4.3.0, )"
+            },
+            "System.Collections.Concurrent": {
+              "target": "Package",
+              "version": "[4.3.0, )"
+            },
+            "System.Collections.Immutable": {
+              "target": "Package",
+              "version": "[8.0.0-preview.4.23259.5, )"
+            },
+            "System.Globalization": {
+              "target": "Package",
+              "version": "[4.3.0, )"
+            },
+            "System.Globalization.Extensions": {
+              "target": "Package",
+              "version": "[4.3.0, )"
+            },
+            "System.IO": {
+              "target": "Package",
+              "version": "[4.3.0, )"
+            },
+            "System.IO.FileSystem": {
+              "target": "Package",
+              "version": "[4.3.0, )"
+            },
+            "System.IO.FileSystem.Primitives": {
+              "target": "Package",
+              "version": "[4.3.0, )"
+            },
+            "System.Linq": {
+              "target": "Package",
+              "version": "[4.3.0, )"
+            },
+            "System.Linq.Expressions": {
+              "target": "Package",
+              "version": "[4.3.0, )"
+            },
+            "System.Linq.Queryable": {
+              "target": "Package",
+              "version": "[4.3.0, )"
+            },
+            "System.Memory": {
+              "target": "Package",
+              "version": "[4.5.5, )"
+            },
+            "System.ObjectModel": {
+              "target": "Package",
+              "version": "[4.3.0, )"
+            },
+            "System.Reflection": {
+              "target": "Package",
+              "version": "[4.3.0, )"
+            },
+            "System.Reflection.Extensions": {
+              "target": "Package",
+              "version": "[4.3.0, )"
+            },
+            "System.Threading": {
+              "target": "Package",
+              "version": "[4.3.0, )"
+            },
+            "System.Threading.Tasks": {
+              "target": "Package",
+              "version": "[4.3.0, )"
+            },
+            "System.Threading.Tasks.Extensions": {
+              "target": "Package",
+              "version": "[4.5.4, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/7.0.105/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
