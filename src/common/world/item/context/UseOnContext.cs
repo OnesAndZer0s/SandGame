@@ -9,27 +9,27 @@ namespace Sandbox.Worlds.Items.Context
 {
   public class UseOnContext
   {
-    public Player player { get; private set; }
-    public InteractionHand hand { get; private set; }
-    public Level level { get; private set; }
-    public RaycastHit rayHit { get; private set; }
-    public ItemStack itemStack { get; private set; }
-    public bool hit { get; private set; }
+    public Player Player { get; private set; }
+    public InteractionHand Hand { get; private set; }
+    public Level Level { get; private set; }
+    public RaycastHit RayHit { get; private set; }
+    public ItemStack ItemStack { get; private set; }
+    public bool Hit { get; private set; }
 
     public UseOnContext(Player player, InteractionHand intHand, RaycastHit raycastHit) :
-      this(player.level, player, intHand, player.GetItemInHand(intHand), raycastHit)
+      this(player.Level, player, intHand, player.GetItemInHand(intHand), raycastHit)
     {
     }
 
     public UseOnContext(Level level, Player player, InteractionHand intHand, ItemStack itemStack, RaycastHit rayHit, bool hit = false)
     {
-      this.player = player;
-      this.hand = intHand;
-      this.rayHit = rayHit;
+      this.Player = player;
+      this.Hand = intHand;
+      this.RayHit = rayHit;
       // this.HitResult = p_43717_;
-      this.itemStack = itemStack;
-      this.level = level;
-      this.hit = hit;
+      this.ItemStack = itemStack;
+      this.Level = level;
+      this.Hit = hit;
     }
 
     // public virtual RaycastHit GetHitResult()
@@ -84,12 +84,12 @@ namespace Sandbox.Worlds.Items.Context
 
     public virtual bool IsSecondaryUseActive()
     {
-      return this.player != null && this.player.IsSecondaryUseActive();
+      return this.Player != null && this.Player.IsSecondaryUseActive();
     }
 
     public virtual float GetRotation()
     {
-      return (this.player == null) ? 0.0f : this.player.LookingRotation.y;
+      return (this.Player == null) ? 0.0f : this.Player.LookingRotation.y;
     }
   }
 

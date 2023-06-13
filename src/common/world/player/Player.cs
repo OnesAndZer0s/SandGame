@@ -6,7 +6,7 @@ namespace Sandbox.Common.Worlds.Players
   public class Player : LivingEntity
   {
 
-    public Level level { get; private set; }
+    public Level Level { get; private set; }
     public Player()
     {
     }

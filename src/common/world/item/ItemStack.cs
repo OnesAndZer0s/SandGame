@@ -18,7 +18,7 @@ namespace Sandbox.Common.Worlds.Items
     // @Nullable
     // private AdventureModeCheck adventurePlaceCheck;
 
-    public static readonly ItemStack EMPTY = new ItemStack((Item)null!, 0);
+    public static readonly ItemStack EMPTY = new((Item)null!, 0);
 
     private Item? item;
     private int count;

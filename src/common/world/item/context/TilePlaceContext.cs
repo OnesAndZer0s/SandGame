@@ -14,11 +14,11 @@ namespace Sandbox.Worlds.Items.Context
     private Vector3 relativePos;
     // protected bool replaceClicked;
 
-    public TilePlaceContext(Player player, InteractionHand intHand, ItemStack itemStack, RaycastHit rayHit) : this(player.level, player, intHand, itemStack, rayHit)
+    public TilePlaceContext(Player player, InteractionHand intHand, ItemStack itemStack, RaycastHit rayHit) : this(player.Level, player, intHand, itemStack, rayHit)
     { }
 
 
-    public TilePlaceContext(UseOnContext useOnCtx) : this(useOnCtx.level, useOnCtx.player, useOnCtx.hand, useOnCtx.itemStack, useOnCtx.rayHit)
+    public TilePlaceContext(UseOnContext useOnCtx) : this(useOnCtx.Level, useOnCtx.Player, useOnCtx.Hand, useOnCtx.ItemStack, useOnCtx.RayHit)
     { }
 
     public TilePlaceContext(Level level, Player player, InteractionHand intHand, ItemStack itemStack, RaycastHit rayHit) : base(level, player, intHand, itemStack, rayHit)

@@ -13,18 +13,18 @@ public class SummonerItem : Item
 
   public override InteractionResult UseOn(UseOnContext useOn)
   {
-    if (useOn.hit)
+    if (useOn.Hit)
     {
       // do the routine of turning that block into a physics entity
-      Vector3i pos = (Vector3i)(useOn.rayHit.point - (useOn.rayHit.normal * 0.5f));
+      Vector3i pos = (Vector3i)(useOn.RayHit.point - (useOn.RayHit.normal * 0.5f));
       Debug.Print("SummonerItem.UseOn");
-      ResourceLocation tile = useOn.level.GetTile(pos);
+      ResourceLocation tile = useOn.Level.GetTile(pos);
       if (tile == "core:air")
       {
         return InteractionResult.PASS;
       }
       Debug.Print(tile);
-      useOn.level.Remove(pos);
+      useOn.Level.Remove(pos);
 
       // DEBUG - spawn a cube
       // GameObject cube = new GameObject(tile);

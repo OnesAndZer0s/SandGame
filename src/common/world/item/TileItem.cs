@@ -12,20 +12,20 @@ namespace Sandbox.Common.Worlds.Items
 #nullable enable
   public class TileItem : Item
   {
-    public Tile tile { get; private set; }
+    public Tile Tile { get; private set; }
 
     public TileItem(Tile tile)
     {
-      this.tile = tile;
+      this.Tile = tile;
     }
 
     public override InteractionResult UseOn(UseOnContext ctx)
     {
-      if (ctx.hit)
+      if (ctx.Hit)
       {
-        Vector3i placeTile = (Vector3i)(ctx.rayHit.point + (ctx.rayHit.normal * 0.5f));
+        Vector3i placeTile = (Vector3i)(ctx.RayHit.point + (ctx.RayHit.normal * 0.5f));
 
-        if (ctx.level.Modify(placeTile, tile))
+        if (ctx.Level.Modify(placeTile, Tile))
         {
           // AudioManager.instance.dig.Play(TileTypes.digSound[TileToReplace], removeTile);
         }
@@ -70,10 +70,10 @@ namespace Sandbox.Common.Worlds.Items
       {
         return InteractionResult.FAIL;
       }
-      Vector3 tilePosition = tpc.rayHit.point;
-      Level level = tpc.level;
-      Player player = tpc.player;
-      ItemStack itemstack = tpc.itemStack;
+      Vector3 tilePosition = tpc.RayHit.point;
+      Level level = tpc.Level;
+      Player player = tpc.Player;
+      ItemStack itemstack = tpc.ItemStack;
       TileState ts2 = level.GetTileState(tilePosition);
       // if (ts2.Is(ts.Tile))
       // {
@@ -98,7 +98,7 @@ namespace Sandbox.Common.Worlds.Items
 
     protected bool PlaceTile(TilePlaceContext tPCtx, TileState tState)
     {
-      return tPCtx.level.SetTile(tPCtx.rayHit.point, tState, 11);
+      return tPCtx.Level.SetTile(tPCtx.RayHit.point, tState, 11);
     }
 
 
@@ -109,7 +109,7 @@ namespace Sandbox.Common.Worlds.Items
 
     protected TileState GetPlacementState(TilePlaceContext tPCtx)
     {
-      TileState? blockstate = this.tile.GetStateForPlacement(tPCtx);
+      TileState? blockstate = this.Tile.GetStateForPlacement(tPCtx);
       return (blockstate != null && this.CanPlace(tPCtx, blockstate)) ? blockstate : null;
     }
 
@@ -220,12 +220,12 @@ namespace Sandbox.Common.Worlds.Items
 
     public void RegisterTiles(Dictionary<Tile, Item> registry, Item item)
     {
-      registry.Add(this.tile, item);
+      registry.Add(this.Tile, item);
     }
 
     public void RemoveFromTileToItemMap(Dictionary<Tile, Item> TileToItemMap, Item itemIn)
     {
-      TileToItemMap.Remove(this.tile);
+      TileToItemMap.Remove(this.Tile);
     }
 
     // public void OnDestroyed(ItemEntity p_150700_)
