@@ -3,6 +3,7 @@
 using OpenTK.Mathematics;
 using Sandbox.Common.NBT;
 using Sandbox.Common.Worlds.Levels;
+using Sandbox.Common.Worlds.Players;
 using Sandbox.Common.Worlds.Tiles;
 using Sandbox.Worlds.Items.Context;
 
@@ -18,13 +19,13 @@ namespace Sandbox.Common.Worlds.Items
       this.tile = tile;
     }
 
-    public override InteractionResult UseOn(UseOnContext context)
+    public override InteractionResult UseOn(UseOnContext ctx)
     {
-      if (context.GetHit())
+      if (ctx.hit)
       {
-        Vector3i placeTile = new Vector3i(context.GetHitResult().point + (context.GetHitResult().normal * 0.5f));
+        Vector3i placeTile = (Vector3i)(ctx.rayHit.point + (ctx.rayHit.normal * 0.5f));
 
-        if (context.GetLevel().Modify(placeTile, tile))
+        if (ctx.level.Modify(placeTile, tile))
         {
           // AudioManager.instance.dig.Play(TileTypes.digSound[TileToReplace], removeTile);
         }
@@ -69,10 +70,10 @@ namespace Sandbox.Common.Worlds.Items
       {
         return InteractionResult.FAIL;
       }
-      Vector3 tilePosition = tpc.GetHitResult().point;
-      Level level = tpc.GetLevel();
-      Player player = tpc.GetPlayer();
-      ItemStack itemstack = tpc.GetItemInHand();
+      Vector3 tilePosition = tpc.rayHit.point;
+      Level level = tpc.level;
+      Player player = tpc.player;
+      ItemStack itemstack = tpc.itemStack;
       TileState ts2 = level.GetTileState(tilePosition);
       // if (ts2.Is(ts.Tile))
       // {
@@ -97,7 +98,7 @@ namespace Sandbox.Common.Worlds.Items
 
     protected bool PlaceTile(TilePlaceContext tPCtx, TileState tState)
     {
-      return tPCtx.GetLevel().SetTile(tPCtx.GetHitResult().point, tState, 11);
+      return tPCtx.level.SetTile(tPCtx.rayHit.point, tState, 11);
     }
 
 

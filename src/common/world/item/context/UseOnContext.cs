@@ -1,38 +1,41 @@
 
+using Sandbox.Common.Maths.Raycasts;
 using Sandbox.Common.Worlds;
 using Sandbox.Common.Worlds.Items;
 using Sandbox.Common.Worlds.Levels;
+using Sandbox.Common.Worlds.Players;
 
 namespace Sandbox.Worlds.Items.Context
 {
   public class UseOnContext
   {
-    private Player player;
-    private InteractionHand hand;
-    private RaycastHit hitResult;
-    private Level level;
-    private ItemStack itemStack;
-    private bool hit;
+    public Player player { get; private set; }
+    public InteractionHand hand { get; private set; }
+    public Level level { get; private set; }
+    public RaycastHit rayHit { get; private set; }
+    public ItemStack itemStack { get; private set; }
+    public bool hit { get; private set; }
 
-    public UseOnContext(Player player, InteractionHand intHand, RaycastHit p_43711_) :
-      this(player.GetLevel(), player, intHand, player.GetItemInHand(intHand), p_43711_)
+    public UseOnContext(Player player, InteractionHand intHand, RaycastHit raycastHit) :
+      this(player.level, player, intHand, player.GetItemInHand(intHand), raycastHit)
     {
     }
 
-    public UseOnContext(Level level, Player player, InteractionHand intHand, ItemStack itemStack, RaycastHit p_43717_, bool hit = false)
+    public UseOnContext(Level level, Player player, InteractionHand intHand, ItemStack itemStack, RaycastHit rayHit, bool hit = false)
     {
       this.player = player;
       this.hand = intHand;
-      this.hitResult = p_43717_;
+      this.rayHit = rayHit;
+      // this.HitResult = p_43717_;
       this.itemStack = itemStack;
       this.level = level;
       this.hit = hit;
     }
 
-    public virtual RaycastHit GetHitResult()
-    {
-      return this.hitResult;
-    }
+    // public virtual RaycastHit GetHitResult()
+    // {
+    //   return this.hitResult;
+    // }
 
     // public virtual Vector3 GetClickedPos()
     // {
@@ -49,30 +52,30 @@ namespace Sandbox.Worlds.Items.Context
     //   return this.hitResult.GetLocation();
     // }
 
-    public virtual ItemStack GetItemInHand()
-    {
-      return this.itemStack;
-    }
+    // public virtual ItemStack GetItemInHand()
+    // {
+    //   return this.itemStack;
+    // }
 
-    public virtual bool GetHit()
-    {
-      return this.hit;
-    }
+    // public virtual bool GetHit()
+    // {
+    //   return this.hit;
+    // }
 
-    public virtual Player GetPlayer()
-    {
-      return this.player;
-    }
+    // public virtual Player GetPlayer()
+    // {
+    //   return this.player;
+    // }
 
-    public virtual InteractionHand GetHand()
-    {
-      return this.hand;
-    }
+    // public virtual InteractionHand GetHand()
+    // {
+    //   return this.hand;
+    // }
 
-    public virtual Level GetLevel()
-    {
-      return this.level;
-    }
+    // public virtual Level GetLevel()
+    // {
+    //   return this.level;
+    // }
 
     // public virtual Vector3 GetHorizontalDirection()
     // {

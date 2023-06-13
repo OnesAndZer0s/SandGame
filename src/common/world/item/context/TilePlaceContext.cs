@@ -1,9 +1,11 @@
 
 
 using OpenTK.Mathematics;
+using Sandbox.Common.Maths.Raycasts;
 using Sandbox.Common.Worlds;
 using Sandbox.Common.Worlds.Items;
 using Sandbox.Common.Worlds.Levels;
+using Sandbox.Common.Worlds.Players;
 
 namespace Sandbox.Worlds.Items.Context
 {
@@ -12,17 +14,17 @@ namespace Sandbox.Worlds.Items.Context
     private Vector3 relativePos;
     // protected bool replaceClicked;
 
-    public TilePlaceContext(Player player, InteractionHand intHand, ItemStack itemStack, RaycastHit p_43634_) : this(player.GetLevel(), player, intHand, itemStack, p_43634_)
+    public TilePlaceContext(Player player, InteractionHand intHand, ItemStack itemStack, RaycastHit rayHit) : this(player.level, player, intHand, itemStack, rayHit)
     { }
 
 
-    public TilePlaceContext(UseOnContext useOnCtx) : this(useOnCtx.GetLevel(), useOnCtx.GetPlayer(), useOnCtx.GetHand(), useOnCtx.GetItemInHand(), useOnCtx.GetHitResult())
+    public TilePlaceContext(UseOnContext useOnCtx) : this(useOnCtx.level, useOnCtx.player, useOnCtx.hand, useOnCtx.itemStack, useOnCtx.rayHit)
     { }
 
-    public TilePlaceContext(Level level, Player player, InteractionHand intHand, ItemStack itemStack, RaycastHit p_43642_) : base(level, player, intHand, itemStack, p_43642_)
+    public TilePlaceContext(Level level, Player player, InteractionHand intHand, ItemStack itemStack, RaycastHit rayHit) : base(level, player, intHand, itemStack, rayHit)
     {
       // this.replaceClicked = true;
-      this.relativePos = p_43642_.point + p_43642_.normal;
+      // this.relativePos = p_43642_.point + p_43642_.normal;
       // this.replaceClicked = p_43638_.GetTileState(p_43642_.point).CanBeReplaced(this);
     }
 

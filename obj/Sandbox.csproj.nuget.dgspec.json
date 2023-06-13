@@ -38,6 +38,10 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "dependencies": {
+            "BepuPhysics": {
+              "target": "Package",
+              "version": "[2.5.0-beta.12, )"
+            },
             "Microsoft.CSharp": {
               "target": "Package",
               "version": "[4.7.0, )"
@@ -98,10 +102,6 @@
               "target": "Package",
               "version": "[4.5.5, )"
             },
-            "System.Numerics.Vectors": {
-              "target": "Package",
-              "version": "[4.5.0, )"
-            },
             "System.ObjectModel": {
               "target": "Package",
               "version": "[4.3.0, )"
@@ -111,10 +111,6 @@
               "version": "[4.3.0, )"
             },
             "System.Reflection.Extensions": {
-              "target": "Package",
-              "version": "[4.3.0, )"
-            },
-            "System.Runtime.Numerics": {
               "target": "Package",
               "version": "[4.3.0, )"
             },

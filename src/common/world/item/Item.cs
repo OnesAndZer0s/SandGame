@@ -3,6 +3,7 @@ using Sandbox.Common.NBT;
 using Sandbox.Common.Registry;
 using Sandbox.Common.Worlds.Entities;
 using Sandbox.Common.Worlds.Levels;
+using Sandbox.Common.Worlds.Players;
 using Sandbox.Common.Worlds.Tiles;
 using Sandbox.Worlds.Items.Context;
 
